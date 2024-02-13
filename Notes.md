@@ -91,3 +91,17 @@ Next, I got the detailed steps for Step 1: Understanding LLAMA.
 
 - **Participate in Forums and Discussions:** Engage with the AI and NLP communities by participating in discussions, asking questions, and sharing your learnings about LLaMA. Hugging Face forums, Stack Overflow, and AI-related subreddits are good platforms for this.
 - **Follow Leading Researchers and Organizations:** Stay updated with the latest developments by following researchers, institutions, and companies involved in LLaMA and large language model research on platforms like Twitter and LinkedIn.
+
+
+
+# Day 2 - Fine Tuning something for real
+
+The most important steps in fine tuning are:
+
+- Get a pretrained model such as Mistral 7B
+- Create the dataset for fine tuning (For experimental purposes, there are 1000s available in huggingface)
+- Tokenize the dataset and prompt
+- Use Peft, LoraConfig (not sure why)
+- Train. Use Google colab as it simply doesn't work locally.
+
+Really nice notebook: https://github.com/brevdev/notebooks/blob/main/mistral-finetune.ipynb
