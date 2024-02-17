@@ -105,3 +105,39 @@ The most important steps in fine tuning are:
 - Train. Use Google colab as it simply doesn't work locally.
 
 Really nice notebook: https://github.com/brevdev/notebooks/blob/main/mistral-finetune.ipynb
+
+# Day 3 - Fine Tune for real using a GPU
+
+From 2 days of delving into this topic, following are my observations:
+
+- AI is just getting off. Everyone is just experimenting and most don't know what to achieve with their projects. One example is [hugging face spaces](https://huggingface.co/spaces). A variety of AI has been built. 
+- Similarly, the amount of resources is also just growing. Hugging face has various datasets and models (more than 100,000). And it is still growing. Although some are famous such as llama, mistral etc, there are thousands of others for different purposes. Datasets for obscure languages are also available. Not all of them are of good quality but people are still getting started.
+- To learn and tryout simple models on a personal PC is possible. Fine tuning the top end models such as mistral 7B requires servers.
+- Many servers such as google colab, brev.dev, kaggle, paperspace etc are available on a pay-as-you-go basis.
+
+My experiment today shall be with brev.dev
+
+In fact, the document - QA that I wanted to do is already available: https://github.com/brevdev/notebooks/blob/main/ocr-pdf-analysis.ipynb
+
+For deploying a fine tuning script on a GPU,
+
+- Create an account in brev.dev
+- Installed the brev CLI
+- Logged in to brev from the CLI
+
+OK. Brev didn't work as expected. The instances were failing to get created. Bought a colab subscription. 
+
+Colab also is taking too much time. There must be a right way of working with these kind of infra. Find out.
+Finally, all issues were resolved and the mistral notebook ran ok. https://gist.github.com/ashwin67/586f6be90910462adbcade56ed8b8c25
+
+What did I learn:
+
+- The fine tuning process requires a high end GPU with a lot of RAM. This is possible only by using colab, GCP, AWS etc and next to impossible to arrange locally.
+- Once the infrastructure is arranged, it is just a matter of money to scale it up.
+- Getting the dependencies right is sometimes difficult but forums help.
+- For specific cases such as document analysis, there is research in other areas too: See https://www.promptingguide.ai/techniques/rag
+- There seems like a lot of money can be made as the field is still in its infancy
+
+# Day 4 - Need a good idea before I can fine tune something.
+
+Go back to working on the office PC. Postrc Viewer.
